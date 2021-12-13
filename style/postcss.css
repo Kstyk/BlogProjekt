@@ -60,88 +60,57 @@ ul {
 }
 
 #container {
-    min-height: 100%;
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-top: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 5%;
-
 }
 
-.items {
-    width: 60%;
-    padding-top: 30px;
-    display: flex;
-    flex-direction:row;
-    gap: 5%;
-
-}
-
-.col_items1, .col_items2 {
-    width: 47.5%;
-}
-
-.item {
-    width: 100%;
-    background-color: #fff;;
+.post {
+    width: 65%;
+    background-color: #fff;
     margin-bottom: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.item img {
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.item h2 {
+.post h2 {
     margin: 0;
     padding-left: 5%;
 }
 
-.item .kat {
+.post .kat {
     color:rgb(250, 103, 103);
     text-decoration: none;
     padding-left: 5%;
 }
 
-.item a:hover {
+.post a:hover {
     text-decoration: underline;
 }
 
-.skrot {
-    padding-left: 5%;
-}
-
-.item h2 a {
+.post h2 a {
     color:black;
     text-decoration: none;
 }
 
-.footerp {
-    color:rgb(195, 192, 192);
-    font-size: 12px;
-    padding-right: 5%;
+.post p{
+    position: relative;
     padding-left: 5%;
+    padding-right: 5%;
+    overflow: auto;
+    text-align: justify;
 }
 
-.footerp a {
-    color:rgb(195, 192, 192);
-    text-decoration: none;
-}
-
-.footerp a:hover {
-    color:rgb(250, 103, 103);
+.post img { 
+    height: 200px;  
+    float: left;
 }
 
 .kategorie {
     width: 30%;
-    padding-top: 30px;
-
 }
 
 .kategoria {
@@ -169,36 +138,18 @@ ul {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
-    .items {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .kategorie {
-        width: 45%;
-    }
-
-    .kategoria {
-        width: 100%;
-    }
-
-    .col_items1, .col_items2 {
-        width: 100%;
-    }
+.footerp {
+    color:rgb(195, 192, 192);
+    font-size: 12px;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
-@media screen and (max-width:800px) {
-    #container {
-        display: flex;
-        flex-direction: column;
-        
-    }
+.footerp a {
+    color:rgb(195, 192, 192);
+    text-decoration: none;
+}
 
-    .items, .kategorie {
-        margin-left: 5%;
-        margin-right: 5%;
-        width: 90%;
-    }
+.footerp a:hover {
+    color:rgb(250, 103, 103);
 }
