@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+}
+
+.sekcja {
+    width: 100%;
+  margin-top: 60px;
+  height: auto;
+  display: flex;
+  background-color: #fff;
+  position: relative;
+
+}
+
+img {
+  width: 60%;
+}
+
+.tekst {
+  width: 35%;
+  padding-left: 2%;
+  padding-right: 3%;
+}
+
+.sekcja {
+    transition: color 0.25s;
+  }
+  .sekcja::before, .sekcja::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+  }
+  .sekcja::before {
+    top: 0;
+    left: 0;
+  }
+  .sekcja::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .sekcja:hover::before, .sekcja:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .sekcja:hover::before {
+    border-top-color: #0eb7da;
+    border-right-color: #0eb7da;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  }
+  .sekcja:hover::after {
+    border-bottom-color: #0eb7da;
+    border-left-color: #0eb7da;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  }
+
+@media screen and (max-width: 1200px) {
+  .sekcja {
+    position: relative;
+  }
+
+  img {
+    opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  }
+
+  .tekst {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(223, 221, 221, 0.493);
+  }
+
+  .sekcja:hover img {
+    opacity: 0.3;
+  }
+  
+  .sekcja:hover .tekst {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .sekcja {
+        margin-top: 60px;
+        height: auto;
+        display: flex;
+        background-color: #fff;
+        width: 70%;
+        margin-left: 10%;
+        margin-right:10%;
+        padding: 5%;
+        border: solid 1px black; 
+      }
+
+    img {
+        display:none;
+    }
+
+    .tekst {
+        width: 100%;
+        opacity: 1;
+        position:relative;
+        background-color: inherit;
+    }
+}
