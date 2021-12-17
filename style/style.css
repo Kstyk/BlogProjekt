@@ -141,12 +141,13 @@ ul {
 .kategorie {
     width: 30%;
     padding-top: 30px;
-
 }
 
 .kategoria {
     width: 100%;
     background-color: white;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .kategoria h3 {
@@ -157,7 +158,7 @@ ul {
 }
 
 .kategoria ul {
-    list-style-type: none;
+    list-style-type: square;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
@@ -167,6 +168,42 @@ ul {
 .kategoria ul li a {
     color:black;
     text-decoration: none;
+}
+
+.newsy {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.newsy h3 {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.newsy ul {
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    gap:10px;
+    font-size: 16px;
+    padding-right: 5%;
+}
+
+.newsy ul li a {
+    color:black;
+    text-decoration: none;
+}
+
+.newsy ul li a:hover, .kategoria ul li a:hover {
+    color:rgb(250, 103, 103);
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {
