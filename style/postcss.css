@@ -1,9 +1,19 @@
+@font-face {
+    font-family: mohave;
+    src: url(SignikaNegative-Light.ttf);
+  }
+
+  @font-face {
+    font-family: mali;
+    src: url(Mali-Regular.ttf);
+  }
+
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Convergence', sans-serif;
+    font-family: mohave;
     background-color: rgb(231, 231, 231);
 
 }
@@ -26,7 +36,7 @@ body, html {
 .tytul {
     margin: 0;
     padding: 0;
-    font-family: 'Mali', sans-serif;
+    font-family: mali;
     margin-bottom: 10px;
 }
 
@@ -38,7 +48,7 @@ body, html {
     color: black;
     margin: 0;
     padding: 0;
-    font-family: 'Mali', sans-serif;
+    font-family: mali;
 }
 
 nav {
@@ -105,29 +115,39 @@ nav ul {
     text-align: justify;
 }
 
-.post img { 
-    height: 200px;  
+.post p img { 
+    width: 350px;
     float: left;
+    margin-right: 4%;
+    margin-bottom: 15px;
 }
 
 .kategorie {
     width: 30%;
+    /* padding-top: 30px; */
 }
 
 .kategoria {
     width: 100%;
     background-color: white;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    
 }
 
 .kategoria h3 {
     margin: 0;
     padding: 0;
-    padding-left: 5%;
+    width: 90%;
+    margin-left: 5%;
     padding-top: 5%;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding-bottom: 2%;
+
 }
 
 .kategoria ul {
-    list-style-type: none;
+    list-style-type: square;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
@@ -137,6 +157,42 @@ nav ul {
 .kategoria ul li a {
     color:black;
     text-decoration: none;
+}
+
+.newsy {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.newsy h3 {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.newsy ul {
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    gap:10px;
+    font-size: 16px;
+    padding-right: 5%;
+}
+
+.newsy ul li a {
+    color:black;
+    text-decoration: none;
+}
+
+.newsy ul li a:hover, .kategoria ul li a:hover {
+    color:rgb(250, 103, 103);
+    text-decoration: underline;
 }
 
 .footerp {
@@ -155,56 +211,7 @@ nav ul {
     color:rgb(250, 103, 103);
 }
 
-#null {
-    font-style: italic;
-}
 
-textarea {
-    width: 70%;
-    margin-left: 30%;
-    height: 200px;
-    resize: none;
-    padding: 10px;
-    font-size: 25px;
-    font-family: inherit;
-}
-
-.wyslij {
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    padding: 13px 50px 13px;
-    outline: 0;
-    border: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    overflow: visible;
-    z-index: 0;
-    float:right;
-  }
-  
-  .wyslij::after {
-    content:"";
-    background-color: rgb(231, 231, 231);
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-  }
-  
-  .wyslij:hover::after {
-    top: 0px;
-    left: 0px;
-  }
-
-  textarea:hover {
-      border-color: inherit;
-  }
 
   .komentarze{
     list-style: none;
@@ -304,25 +311,23 @@ textarea {
 .user-kom p:after{
     content: '';
     position: absolute;
-    width: 15px;
+    width: 90%;
     height: 15px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    border: 2px solid #f3f3f3;
-    left: -8px;
-    top: 18px;
+    border-radius: 5px;
+    background-color: white;
+    left:5%;
+    top: -10px;
 }
 
 .author-kom p:after{
     content: '';
     position: absolute;
-    width: 15px;
+    width: 90%;
     height: 15px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    border: 2px solid #e2f8ff;
-    right: -8px;
-    top: 18px;
+    border-radius: 5px;
+    background-color: white;
+    left:5%;
+    top: -10px;
 }
 
 
@@ -347,6 +352,7 @@ width: 80%;
     width:100%;
     margin-left: 0;
     min-height: 80px;
+    resize: none;
     /* padding: 15px 20px; */
 }
 
@@ -367,5 +373,71 @@ width: 80%;
 
     padding: 10px 25px;
     margin-top: 18px;
+}
+
+@media screen and (max-width: 1300px) { 
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .kategorie {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        margin-bottom: 0;
+        padding-top: 2%;
+    }
+
+    .kategoria {
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .newsy {
+        margin-bottom: 0;
+    }
+
+    .newsy h3 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .kategoria h3 {
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .post p img {
+        width: 100%;
+    }
+    #container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .kategorie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kategoria, .newsy {
+        width: 90%;
+    }
+
+    .avatar img{
+        display: none;
+    }
 }
 
