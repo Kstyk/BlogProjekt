@@ -58,13 +58,13 @@ img {
     height: 100%;
   }
   .sekcja:hover::before {
-    border-top-color: #0eb7da;
-    border-right-color: #0eb7da;
+    border-top-color: rgb(250, 103, 103);
+    border-right-color: rgb(250, 103, 103);
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
   }
   .sekcja:hover::after {
-    border-bottom-color: #0eb7da;
-    border-left-color: #0eb7da;
+    border-bottom-color: rgb(250, 103, 103);
+    border-left-color: rgb(250, 103, 103);
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
   }
 

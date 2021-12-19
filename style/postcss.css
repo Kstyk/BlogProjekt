@@ -69,6 +69,10 @@ nav ul {
     padding-left: 0;
 }
 
+li {
+    position: relative;
+}
+
 #container {
     width: 70%;
     margin-left: 15%;
@@ -151,7 +155,13 @@ nav ul {
     display: flex;
     flex-direction: column;
     padding-left: 10%;
+    font-size: 16px;
     gap:10px;
+}
+
+.kategoria ul li {
+    width: 90%;
+    margin-right: 10%;
 }
 
 .kategoria ul li a {
@@ -190,9 +200,23 @@ nav ul {
     text-decoration: none;
 }
 
+li:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 1px;
+    background: rgb(250, 103, 103);
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -3px;
+  }
+li:hover:after {
+    width: 100%;
+    left: 0px;
+  }
+
 .newsy ul li a:hover, .kategoria ul li a:hover {
     color:rgb(250, 103, 103);
-    text-decoration: underline;
 }
 
 .footerp {

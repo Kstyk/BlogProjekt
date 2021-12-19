@@ -32,6 +32,9 @@ body, html {
     color:black;
 }
 
+.bold {
+    font-weight: bold;
+}
 
 .tytul {
     margin: 0;
@@ -67,6 +70,10 @@ ul {
     font-size: 20px;
     gap: 20px;
     padding-left: 0;
+}
+
+li {
+    position:relative;
 }
 
 #container {
@@ -106,6 +113,7 @@ ul {
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
+    margin-bottom: 7px;
 }
 
 .item h2 {
@@ -116,12 +124,24 @@ ul {
 .item .kat {
     color:rgb(250, 103, 103);
     text-decoration: none;
-    padding-left: 5%;
+    margin-left: 5%;
+    position:relative;
 }
 
-.item a:hover {
-    text-decoration: underline;
-}
+.item .kat:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 1px;
+    background: rgb(250, 103, 103);
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -3px;
+  }
+.item .kat:hover:after {
+    width: 100%;
+    left: 0px;
+  }
 
 .skrot {
     padding-left: 5%;
@@ -142,7 +162,23 @@ ul {
 .footerp a {
     color:rgb(195, 192, 192);
     text-decoration: none;
+    position:relative;
 }
+
+.footerp a:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 1px;
+    background: rgb(250, 103, 103);
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -3px;
+  }
+  .footerp a:hover:after {
+    width: 100%;
+    left: 0px;
+  }
 
 .footerp a:hover {
     color:rgb(250, 103, 103);
@@ -177,7 +213,13 @@ ul {
     display: flex;
     flex-direction: column;
     padding-left: 10%;
+    font-size: 16px;
     gap:10px;
+}
+
+.kategoria ul li {
+    width: 90%;
+    margin-right: 10%;
 }
 
 .kategoria ul li a {
@@ -216,12 +258,33 @@ ul {
     text-decoration: none;
 }
 
+
+li:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 1px;
+    background: rgb(250, 103, 103);
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -3px;
+  }
+li:hover:after {
+    width: 100%;
+    left: 0px;
+  }
+
 .newsy ul li a:hover, .kategoria ul li a:hover {
     color:rgb(250, 103, 103);
-    text-decoration: underline;
 }
 
 @media screen and (max-width: 1300px) {
+    #container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .items {
         width: 45%;
         display: flex;
@@ -241,11 +304,10 @@ ul {
     }
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
     #container {
         display: flex;
         flex-direction: column;
-        
     }
 
     .items, .kategorie {
@@ -253,4 +315,18 @@ ul {
         margin-right: 5%;
         width: 90%;
     }
+}
+
+@media screen and (max-width:650px) {
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .items, .kategorie {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    
 }
