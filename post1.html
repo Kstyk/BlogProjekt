@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog piłkarski</title>
     <link rel="stylesheet" href="style/postcss.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -87,9 +88,10 @@
                     <p>Suspendisse gravida sem?</p>
                 </li>
                 <li class="write-new">    
-                        <textarea placeholder="Napisz komentarz..." name="comment"></textarea>
+                        <textarea placeholder="Napisz komentarz..." name="comment" id="komentarz"></textarea>
+                        Twój nick:<input type="text" name="nick" id="nick">
                         <div>
-                            <button type="submit">Wyślij</button>
+                            <button type="submit" id="wyslij">Wyślij</button>
                         </div>
                 </li>
             </ul>

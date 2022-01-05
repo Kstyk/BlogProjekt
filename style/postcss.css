@@ -200,7 +200,7 @@ li {
     text-decoration: none;
 }
 
-li:after {
+.kategorie ul li:after {
     position: absolute;
     left: 0;
     content: '';
@@ -210,12 +210,12 @@ li:after {
     width: 0;
     bottom: -3px;
   }
-li:hover:after {
+.kategorie ul li:hover:after {
     width: 100%;
     left: 0px;
   }
 
-.newsy ul li a:hover, .kategoria ul li a:hover {
+.kategorie ul li a:hover, .kategoria ul li a:hover {
     color:rgb(250, 103, 103);
 }
 

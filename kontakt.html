@@ -8,6 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Mali&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/contact.css">
+    <script src="js/validate.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -40,22 +41,21 @@
                     +48 568 902 822<br>
                     dragseweryn@zohomail.eu<br>
 
-                    <form>
+                    <form onsubmit="return false">
                         <input type="text" name="imie" id="imie" placeholder="Imię"><br>
-                        <input type="email" name="email" id="email" placeholder="Email"><br>
-                        <input type="tel" name="tel" id="tel" placeholder="Telefon"><br>
+                        <input type="text" name="email" id="email" placeholder="Email"><br>
+                        <input type="text" name="tel" id="tel" placeholder="Telefon"><br>
                         <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
                         <div class="center">
-                        <button class="wyslij">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                              </svg>
-                              <span>Wyślij</span>
-                        </button>
-                        </div>
+                            <button class="wyslij" id="przycisk">
+                                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                  </svg>
+                                  <span>Wyślij</span>
+                            </button>
+                            </div>
                     </form>
-
                 </p>
             </div>
         </div>
