@@ -7,6 +7,7 @@
     <title>Blog piłkarski</title>
     <link rel="stylesheet" href="style/postcss.css">
     <script src="js/script.js" defer></script>
+    <script src="js/scroll.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -21,10 +22,10 @@
             </ul>
         </nav>
     </header>
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
     <div id="container">
         <div class="post">
-            <a class="kat" href="uncategorized.html">Bez kategorii</a>
+            <a class="kat" href="#">Bez kategorii</a>
             <h2><a href="post1.html">Czy było warto?</a></h2>
             <p class="footerp"><a href="#">Maj 20, 2019</a>  By <a href="#">Admin</a>  5 min Czytania</p>
 
@@ -60,7 +61,7 @@
                     <p>Suspendisse gravida sem?</p>
                 </li>
             
-                <li class="komentarz author-kom">
+                <li class="komentarz user-kom">
                     <div class="info">
                         <div class="time">
                         <a href="#">Jacek Ważniak</a>
@@ -88,10 +89,16 @@
                     <p>Suspendisse gravida sem?</p>
                 </li>
                 <li class="write-new">    
-                        <textarea placeholder="Napisz komentarz..." name="comment" id="komentarz"></textarea>
-                        Twój nick:<input type="text" name="nick" id="nick">
-                        <div>
-                            <button type="submit" id="wyslij">Wyślij</button>
+                        <textarea placeholder="Napisz komentarz... (Minimum 10 znaków)" name="comment" id="komentarz"></textarea>
+                        <input type="text" name="nick" id="nick" placeholder="Twój nick...">
+                        <div class="center">
+                            <button class="wyslij" id="przycisk">
+                                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                  </svg>
+                                  <span>Wyślij</span>
+                            </button>
                         </div>
                 </li>
             </ul>
@@ -100,19 +107,19 @@
                 <section class="kategoria">
                     <h3>Kategorie</h3>
                     <ul>
-                        <li><a href="uncategorized.html">Bez kategorii</a></li>
-                        <li><a href="footballer.html">Piłkarze</a></li>
-                        <li><a href="clubs.html">Kluby</a></li>
-                        <li><a href="other.html">Inne</a></li>
+                        <li><a href="#">Bez kategorii</a></li>
+                        <li><a href="#">Piłkarze</a></li>
+                        <li><a href="#">Kluby</a></li>
+                        <li><a href="#">Inne</a></li>
                     </ul>
                 </section>
                 <section class="newsy">
                     <h3>Najnowsze newsy</h3>
                     <ul>
-                        <li><a href="post1.html">Rząd zniósł obostrzenie co do gry na orlikach</a></li>
-                        <li><a href="post2.html">Poznaliśmy wyniki złotej piłki. Czy Lewandowski powinien się cieszyć?</a></li>
-                        <li><a href="post3.html">Katar zorganizuje mundial w 2022 roku</a></li>
-                        <li><a href="post4.html">Już we wtorek rozpoczynamy pierwsze mecze półfinałowe</a></li>
+                        <li><a href="#">Rząd zniósł obostrzenie co do gry na orlikach</a></li>
+                        <li><a href="post1.html">Poznaliśmy wyniki złotej piłki. Czy Lewandowski powinien się cieszyć?</a></li>
+                        <li><a href="#">Katar zorganizuje mundial w 2022 roku</a></li>
+                        <li><a href="#">Już we wtorek rozpoczynamy pierwsze mecze półfinałowe</a></li>
                     </ul>
                 </section>
             </div>
