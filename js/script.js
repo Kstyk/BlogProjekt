@@ -1,8 +1,11 @@
 //komentarze
+window.onload = function setTemplate() {
+    if(localStorage.getItem('template')!=null )
+        document.querySelector(".komentarze").innerHTML = localStorage.getItem('template');
 
-let wyslij = document.getElementById("przycisk");
+    var wyslij = document.getElementById("przycisk");
 
-wyslij.addEventListener("click", function() {
+    wyslij.addEventListener("click", function() {
     let kom = document.getElementById("komentarz").value;
     let nick = document.getElementById("nick").value;
 
@@ -17,9 +20,14 @@ wyslij.addEventListener("click", function() {
 
         let komentarze = document.querySelector(".komentarze");
         komentarze.insertBefore(newKom, komentarze.childNodes[0]);
+        setOnLocalStorage();
     } else
     {
         alert("Nick lub komentarz jest za krótki!");
     }
 })
+};
 
+function setOnLocalStorage () {
+    localStorage.setItem('template', document.querySelector(".komentarze").innerHTML);
+}
