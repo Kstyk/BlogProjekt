@@ -1,35 +1,26 @@
-var slide = 0,
-    slides = document.querySelectorAll('#slides > img'),
-    numSlides = slides.length,
+var slajd = 0,
+    slajdy = document.querySelectorAll('#slides > img'),
+    liczSlajdy = slajdy.length,
 
-    currentSlide = function() {
-      var itemToShow = Math.abs(slide % numSlides);
-      [].forEach.call(slides, function(el) {
+    obecnySlajd = function() {
+      var item = Math.abs(slajd % liczSlajdy);
+      [].forEach.call(slajdy, function(el) {
         el.classList.remove('slideActive')
       });
-      slides[itemToShow].classList.add('slideActive');
+      slajdy[item].classList.add('slideActive');
       resetInterval();
     },
-    next = function() {
-      slide++;
-      currentSlide();
-    },
-    prev = function() {
-      slide--;
-      currentSlide();
-    },
-    resetslide = function() {
-      var elm = document.querySelector('#slides > li'),
-          newone = elm.cloneNode(true),
-          x = elm.parentNode.replaceChild(newone, elm);
+    nast = function() {
+      slajd++;
+      obecnySlajd();
     },
     resetInterval = function() {
       clearInterval(autonext);
       autonext = setInterval(function() {
-        slide++;
-        currentSlide();
+        slajd++;
+        obecnySlajd();
       }, 5000);
     },
     autonext = setInterval(function() {
-      next();
+      nast();
     }, 5000);
