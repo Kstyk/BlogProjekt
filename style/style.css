@@ -12,10 +12,10 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     font-family: mohave;
     background-color: rgb(231, 231, 231);
-
+    
 }
 
 
@@ -302,6 +302,15 @@ li:hover:after {
     color:rgb(250, 103, 103);
 }
 
+#stopka {
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (max-width: 1300px) {
     #container {
         width: 80%;
@@ -339,6 +348,10 @@ li:hover:after {
         margin-right: 5%;
         width: 90%;
     }
+
+    #stopka {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -352,5 +365,4 @@ li:hover:after {
         margin-left: 2.5%;
         margin-right: 2.5%;
     }
-    
 }

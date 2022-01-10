@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -88,6 +88,11 @@ body {
     border-bottom-color: rgb(250, 103, 103);
     border-left-color: rgb(250, 103, 103);
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  }
+
+  #stopka {
+    position: absolute;
+    bottom:0;
   }
 
 @media screen and (max-width: 1200px) {

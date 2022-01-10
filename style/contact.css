@@ -134,6 +134,10 @@ form {
     height: 800px;
 }
 
+#stopka {
+    margin-top: 30px;
+}
+
 @media  screen and (max-width:1200px) {
     .container {
         height: 100%;
