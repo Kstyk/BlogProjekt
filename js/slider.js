@@ -8,7 +8,6 @@ var slide = 0,
         el.classList.remove('slideActive')
       });
       slides[itemToShow].classList.add('slideActive');
-      resetProgress();
       resetInterval();
     },
     next = function() {
