@@ -21,6 +21,7 @@ window.onload = function setTemplate() {
         let komentarze = document.querySelector(".komentarze");
         komentarze.insertBefore(newKom, komentarze.childNodes[0]);
         setOnLocalStorage();
+        location.reload();
     } else
     {
         alert("Nick lub komentarz jest za krótki!");
@@ -31,3 +32,4 @@ window.onload = function setTemplate() {
 function setOnLocalStorage () {
     localStorage.setItem('template', document.querySelector(".komentarze").innerHTML);
 }
+

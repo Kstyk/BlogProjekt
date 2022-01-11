@@ -162,3 +162,9 @@ body {
         background-color: inherit;
     }
 }
+
+@media screen and (max-width:380px) {
+  #stopka {
+    position:relative;
+  }
+}
