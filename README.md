@@ -1,4 +1,5 @@
-Link do strony:
-https://kstyk.github.io/BlogProjekt/
-Dokumentacja:
-https://kstyk.github.io/BlogProjekt/DokumentacjaHTMLCSSJS.pdf
+Link do strony:<br>
+https://kstyk.github.io/BlogProjekt/<br>
+Dokumentacja:<br>
+https://kstyk.github.io/BlogProjekt/DokumentacjaHTMLCSS.pdf<br>
+https://kstyk.github.io/BlogProjekt/DokumentacjaJS.pdf
