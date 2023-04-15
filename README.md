@@ -1,3 +1,6 @@
+#BlogProjekt
+Prosty projekt strony internetowej napisany w czystym CSS i JavaScript.
+
 Link do strony:<br>
 https://kstyk.github.io/BlogProjekt/<br>
 Dokumentacja:<br>
